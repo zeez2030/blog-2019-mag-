@@ -1,0 +1,304 @@
+* {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    background: white;
+}
+
+.brand-name {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    font-family: 'Major Mono Display';
+    font-size: 40px;
+    font-weight: 900;
+    color: red;
+}
+
+.social {
+    position: absolute;
+    top: 2rem;
+    left: 88%;
+}
+
+.social ul li {
+    padding: 0 .8rem;
+    font-size: 1.5rem;
+}
+
+.about {
+    text-align: center;
+    padding: 2rem 0 2rem 2rem;
+}
+
+.about li {
+    margin-right: 3rem;
+    font-family: 'Aleo';
+
+    ;
+}
+
+.about li a {
+    color: #707070;
+    text-transform: uppercase;
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.mainpart .carousel-item {
+    margin-top: 90px;
+    height: 600px;
+}
+
+.mainpart img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    object-position: 0px -1580px;
+}
+
+.first-carousel-caption {
+    margin-bottom: 300px;
+    color: black;
+
+
+}
+
+.first-carousel-caption h1 {
+    font-family: 'Major Mono Display';
+    font-weight: 500;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.first-carousel-caption button {
+    color: white;
+    font-family: 'Aleo';
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 6px;
+    width: 15%;
+    background: none;
+    border: 1px solid white;
+    transition: all 0.8s;
+}
+
+.first-carousel-caption button:hover {
+    color: #222;
+    background: #ffd;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 4px 2px 1px black;
+    font-weight: bolder;
+
+}
+
+
+.three-sections ul {
+    margin: 5rem 0 8rem 0;
+}
+
+.three-sections ul li {
+
+    padding: 0 3rem;
+    font-family: 'Aleo';
+    text-transform: uppercase;
+
+}
+
+.three-sections ul li {
+    /* position: relative; */
+
+    transition: all 0.5s;
+}
+
+.three-sections ul li:hover {
+    transform: scale(1.06);
+}
+
+.three-sections ul li i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.people a {
+    color: #C56848;
+}
+
+.places a {
+    color: #51876B;
+
+}
+
+.places {
+    top: 10%;
+}
+
+.first-row {
+    margin-bottom: 3rem;
+}
+
+.eye a {
+    color: #93B7C9;
+}
+
+.card-1 {
+    width: 500px;
+    height: 570px;
+    border-radius: 2px;
+    box-shadow: .2px .2px black;
+    position: relative;
+    transition: all .4s;
+}
+
+.card-1:hover {
+    transform: scale(1.003);
+    box-shadow: 2px 2px 9px #222;
+}
+
+.card-2:hover {
+    transform: scale(1.003);
+    box-shadow: 2px 2px 9px #555;
+}
+
+.card-1 img {
+    height: 385px;
+    object-fit: cover;
+    object-position: 100% 90%;
+    width: 100%;
+
+}
+
+.card-1 .editor {
+    position: absolute;
+    font-family: 'Aleo';
+    top: 69%;
+    left: 7%;
+    font-size: .9rem;
+    color: #666666;
+}
+
+.card-1 .date {
+    position: absolute;
+    top: 72%;
+    left: 7%;
+    font-size: .8rem;
+}
+
+.card-1 .title {
+    position: absolute;
+    font-family: 'Aleo';
+    font-weight: 900;
+    top: 80%;
+    left: 7%;
+    font-size: 1.7rem;
+}
+
+.card-2 {
+    width: 500px;
+    height: 600px;
+    border-radius: 2px;
+    box-shadow: .2px .2px black;
+    position: relative;
+    transition: all .4s;
+}
+
+.card-2 img {
+    height: 385px;
+    width: 100%;
+
+
+}
+
+.feather {
+    object-fit: cover;
+    object-position: 0% 90%;
+}
+
+.card-2 .editor {
+    position: absolute;
+    font-family: 'Aleo';
+    top: 66%;
+    left: 7%;
+    font-size: .9rem;
+    color: #666666;
+}
+
+.card-2 .date {
+    position: absolute;
+    top: 69%;
+    left: 7%;
+    font-size: .8rem;
+}
+
+.card-2 .title {
+    position: absolute;
+    font-family: 'Aleo';
+    font-weight: 900;
+    top: 74%;
+    left: 7%;
+    font-size: 1.7rem;
+}
+
+
+.second-carousel-caption {
+    margin-bottom: 20%;
+    color: black;
+
+
+}
+
+
+.second-carousel-caption h1 {
+    font-family: 'Major Mono Display';
+    font-weight: 500;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.second-carousel-caption button {
+    color: white;
+    font-family: 'Aleo';
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 6px;
+    width: 15%;
+    background: none;
+    border: 1px solid white;
+    transition: all 0.8s;
+}
+
+.second-carousel-caption button:hover {
+    color: #222;
+    background: #ffd;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 4px 2px 1px black;
+    font-weight: bolder;
+
+}
+
+.noslidecarousel .carousel-item {
+    margin-top: 90px;
+    height: 700px;
+}
+
+.noslidecarousel img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
