@@ -4,17 +4,25 @@
 
 
     <footer>
+        <img src="img/footer2.jpg" alt="">
+        <h1>APEC</h1>
+        <ul class="d-flex info">
+            <li> <a href="index.php"> Home</a></li>
+            <li> <a href="#"> About</a></li>
+            <li> <a href="#"> Commitiees</a></li>
+            <li> <a href="#"> Vision</a></li>
+            <li> <a href="#"> High Board 2019</a></li>
+        </ul>
         <div class="social-footer d-flex">
             <ul class="d-flex">
                 <li><a href="#" ><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
-
-            <span class="apec-name">
-                 &reg; 2019 APEC'19 IT Committee.
-            </span>
         </div>
+        <span class="apec-name">
+                 &reg; 2019 APEC'19 IT Committee.
+        </span>
 
 
     </footer>

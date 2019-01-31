@@ -36,10 +36,7 @@ class Database
     public function insert($query)
     {
         $insert_row = $this->link->query($query) or die($this->link->error . __LINE__);
-        if ($insert_row) {
-            header("Location:index.php?msg=" . urlencode('record Added'));
-            exit();
-        } else {
+        if (!$insert_row) {
             die('Error : (' . $this->link->error . ') ' . $this->link->error);
         }
     }
@@ -47,10 +44,8 @@ class Database
     public function update($query)
     {
         $update_row = $this->link->query($query) or die($this->link->error . __LINE__);
-        if ($update_row) {
-            header("Location:index.php?msg=" . urlencode('record Updated'));
-            exit();
-        } else {
+        if (!$update_row) {
+
             die('Error : (' . $this->link->error . ') ' . $this->link->error);
         }
     }

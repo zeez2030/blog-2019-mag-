@@ -5,7 +5,7 @@ include 'classes/database.php';
 include 'helpers/format_helper.php';
 
 $db = new Database;
-$query = "SELECT * from posts;";
+$query = "SELECT * from posts order by id desc;";
 $posts = $db->select($query);
 $counter = 1;
 
@@ -48,9 +48,10 @@ $counter = 1;
     </div>
     <section class="container three-sections" id="bar">
         <ul class="d-flex justify-content-center">
-            <li class="people"><a href="#"><i class="fas fa-users"></i> People</a></li>
-            <li class="places"><a href="#"><i class="fas fa-map-marker-alt"></i>places</a></li>
-            <li class="eye"><a href="#"><i class="far fa-eye"></i>experince</a></li>
+            <li class="people"><a href="cat.php?id=1"><i class="fas fa-newspaper"></i> news</a></li>
+            <li class="places"><a href="cat.php?id=2"><i class="fas fa-map-marker-alt"></i>events</a></li>
+            <li class="eye"><a href="cat.php?id=3"><i class="fab fa-leanpub"></i>Tutorials</a></li>
+            <li class="misc"><a href="cat.php?id=4"><i class="fab fa-discourse"></i>Misc</a></li>
         </ul>
     </section>
 <?php
@@ -63,6 +64,18 @@ if ($posts) : ?>
             <div class="col">
                 <div class="card-1">
                     <img class="" src='<?php echo $row['picture']; ?>' alt="Card image cap">
+                    <?php if ($row['category'] == 1) : ?>
+                    <span class="cat-type-1"><i class="fas fa-newspaper"></i></span>
+                    <?php elseif ($row['category'] == 2) : ?>
+                    <span class="cat-type-2"><i class="fas fa-map-marker-alt"></i></span>
+                     <?php elseif ($row['category'] == 3) : ?>
+                    <span class="cat-type-3"><i class="fab fa-leanpub"></i></span>
+                    <?php else : ?>
+                    <span class="cat-type-4"><i class="fab fa-discourse"></i></span>
+
+            <?php endif; ?>
+                        
+                    
                     <p class="editor"><?php echo $row['author']; ?></p>
                     <p class="text-muted date"><?php echo formatDate($row['date']); ?></p>
                     <p class="title"><?php echo $row['title']; ?></p>
@@ -70,37 +83,7 @@ if ($posts) : ?>
                 </div>
             </div>
             <?php endwhile; ?>
-            <!-- <div class="col">
-                <div class="card-2">
-                    <img class="" src="img/photo2.jpg" alt="Card image cap">
-                    <p class="editor">Mohammed gamal</p>
-                    <p class="text-muted date">January 23, 2019</p>
-                    <p class="title">The wind mystery</p>
-                </div>
-            </div> -->
         </div>
-        <div class="row first-row">
-            <div class="col">
-                <div class="card-2">
-                    <img class="feather" src="img/photo2.jpg" alt="Card image cap">
-                    <p class="editor">Mohammed gamal</p>
-                    <p class="text-muted date">January 23, 2019</p>
-                    <p class="title">The wind mystery</p>
-                    <a href="#" class="read">ReadMore</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card-1">
-                    <img class="" src="img/photo2.jpg" alt="Card image cap">
-                    <p class="editor">Mohammed gamal</p>
-                    <p class="text-muted date">January 23, 2019</p>
-                    <p class="title">The wind mystery</p>
-                </div>
-            </div>
-        </div>
-
-
-
     </section>
 <?php else : ?>
 <p>there are no posts</p>
@@ -120,7 +103,37 @@ if ($posts) : ?>
 
         </div>
     </div>
+ <section class="container show-by-cat">
+     <h1>Most popular Articles</h1>
+        <div class="row first-row">
+            <?php 
+            $db = new Database;
+            $query = "SELECT * from posts order by view desc limit 4;";
+            $postss = $db->select($query);
+            while ($rows = $postss->fetch_assoc()) :
+            ?>
+            <div class="col">
+                <div class="card-1">
+                    <img class="" src='<?php echo $rows['picture']; ?>' alt="Card image cap">
+                    <?php if ($rows['category'] == 1) : ?>
+                    <span class="cat-type-1"><i class="fas fa-newspaper"></i></span>
+                    <?php elseif ($rows['category'] == 2) : ?>
+                    <span class="cat-type-2"><i class="fas fa-map-marker-alt"></i></span>
+                     <?php elseif ($rows['category'] == 3) : ?>
+                    <span class="cat-type-3"><i class="fab fa-leanpub"></i></span>
+                    <?php else : ?>
+                    <span class="cat-type-4"><i class="fab fa-discourse"></i></span>
 
+            <?php endif; ?>
+                    <p class="editor"><?php echo $rows['author']; ?></p>
+                    <p class="text-muted date"><?php echo formatDate($rows['date']); ?></p>
+                    <p class="title"><?php echo $rows['title']; ?></p>
+                    <a class="read " href="post.php?id=<?php echo urlencode($rows['id']); ?>">ReadMore </a>
+                </div>
+            </div>
+            <?php endwhile; ?>
+        </div>
+    </section>
 
 
 

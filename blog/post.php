@@ -8,6 +8,8 @@ $db = new Database;
 $query = "SELECT * from posts where id=" . $id . ";";
 $post = $db->select($query);
 $row = $post->fetch_assoc();
+$query = "UPDATE posts set view=view+1 where id =$id ;";
+$db->update($query);
 $comment = $_POST['comment'];
 if ($comment) {
     $query = "INSERT INTO comments(post_id , content) VALUES
@@ -63,7 +65,7 @@ $comments = $db->select($query);
     </section>
     <section class="comment-area container"> 
         <form action="post.php?id=<?php echo $id; ?>" method="POST"> 
-            <textarea name="comment" id="" cols="155" rows="10" placeholder="Write your comment"></textarea>
+            <textarea name="comment" id="" cols="140" rows="10" placeholder="Write your comment"></textarea>
             <input type="submit"  class ="button" name='submit' placeholder="Add comment">
         </form>  
     <?php if ($comments) : ?>

@@ -20,7 +20,7 @@
 
     <header class="fixed-top" id="head">
         <ul class="d-flex about">
-            <li> <a href="addpost.php">ADD post</a> </li>
+            <li> <a href="#">Help</a> </li>
             <li> <a href="#">About</a> </li>
             <li> <a href="#">zeez</a> </li>
         </ul>

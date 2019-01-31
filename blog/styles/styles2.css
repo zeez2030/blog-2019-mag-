@@ -11,6 +11,7 @@
      position: relative;
      z-index: 100;
      background: white;
+     margin-bottom: 30rem;
  }
 
 
@@ -62,6 +63,10 @@
  a:hover {
      text-decoration: none;
      color: black;
+ }
+
+ .mainpart {
+     margin-top: 3rem;
  }
 
  .mainpart .carousel-item {
@@ -163,6 +168,10 @@
      color: #93B7C9;
  }
 
+ .misc a {
+     color: #ffc14f;
+ }
+
  .card-1 {
      width: 500px;
      height: 570px;
@@ -171,6 +180,38 @@
      position: relative;
      transition: all .3s;
      margin-bottom: 2rem;
+ }
+
+ .card-1 span {
+     width: auto;
+     border-radius: 40rem;
+     position: absolute;
+     left: 80%;
+     top: 64%;
+     padding: .5rem;
+
+ }
+
+ .cat-type-1 {
+     background: #C56848;
+ }
+
+ .cat-type-2 {
+     background: #436E65;
+ }
+
+ .cat-type-3 {
+     background: #93B7C9;
+ }
+
+ .cat-type-4 {
+     background: #ffc14f;
+ }
+
+ .card-1 span i {
+     font-size: 1.5rem;
+     color: white;
+
  }
 
  .card-1:hover {
@@ -212,6 +253,25 @@
      font-size: 1.7rem;
  }
 
+ .show-by-cat .row,
+ .show-by-cat-page .row {
+     margin-top: 2rem;
+ }
+
+ .show-by-cat-page {
+     margin-top: 12rem;
+ }
+
+ .show-by-cat {
+     margin-top: 5rem;
+ }
+
+ .show-by-cat h1 {
+     text-align: center;
+     font-family: 'Aleo';
+     margin-bottom: 6rem;
+     font-weight: 900;
+ }
 
  .read {
      font-family: 'Aleo';
@@ -220,8 +280,8 @@
      border: .5px solid #222;
      border-radius: 15px;
      position: absolute;
-     top: 75%;
-     left: 88%;
+     top: 70%;
+     left: 90%;
      padding: 8px;
      transition: all .2s;
      background: white;
@@ -272,6 +332,10 @@
      box-shadow: 4px 2px 1px black;
      font-weight: bolder;
 
+ }
+
+ .noslidecarousel {
+     margin-bottom: 4rem;
  }
 
  .noslidecarousel .carousel-item {
@@ -438,18 +502,18 @@
      padding: 10px;
      margin-bottom: 25px;
      position: relative;
-     background: #ddd;
+     background: rgb(202, 196, 211);
  }
 
  .comment-area .button {
      padding: 10px;
      position: absolute;
-     left: 70%;
+     left: 71%;
      margin-bottom: 10px;
      font-family: 'Indie Flower';
      font-weight: 900;
      border: none;
-     background: none;
+     background: white;
      outline: none;
      border: .2px solid #555;
      border-radius: 10px;
@@ -460,7 +524,7 @@
 
  .comment-area .button:hover {
      transform: scale(1.09);
-     background: #eee;
+     background: rgb(238, 183, 183);
      color: #333;
      border: 0;
  }
@@ -507,13 +571,70 @@
  }
 
  /* footer */
+ footer {
+     height: 70vh;
+     position: relative;
+ }
+
+ footer h1 {
+     position: absolute;
+     top: 10%;
+     left: 23%;
+     color: rgb(204, 60, 60);
+     font-family: 'Major Mono Display';
+     font-weight: 200;
+
+ }
+
+ footer .info {
+     position: absolute;
+     top: 25%;
+     left: 22%;
+
+     font-family: 'Major Mono Display';
+
+ }
+
+ footer .info li {
+     margin-right: 5rem;
+     font-weight: 900;
+     font-size: 20px;
+     transition: all 0.3s;
+ }
+
+ footer .info li:hover {
+     transform: scale(1.03);
+ }
+
+ footer .info a {
+     color: #444;
+     transition: all 0.3s;
+ }
+
+ footer .info a:hover {
+     color: rgb(204, 60, 60);
+ }
+
+
+
+ footer img {
+     object-fit: cover;
+     object-position: 0% 0%;
+     height: 100%;
+     width: 100%;
+
+ }
 
  .social-footer {
      padding: 1rem;
      /* margin-top: .5rem; */
-     background: #ddd;
-     border-top: .1rem solid red;
-     position: relative;
+     /* background: #ddd; */
+
+     position: absolute;
+     top: 45%;
+     left: 22%;
+
+
 
  }
 
@@ -527,6 +648,11 @@
 
  .social-footer ul li {
      padding: 0 2rem;
+     transition: all 0.3s;
+ }
+
+ .social-footer ul li:hover {
+     transform: scale(1.1);
  }
 
  .social-footer ul li a {
@@ -536,16 +662,17 @@
  }
 
  .social-footer ul li a:hover {
-     color: red;
+     color: rgb(204, 60, 60);
 
  }
 
- .social-footer .apec-name {
-     position: relative;
+ .apec-name {
+     position: absolute;
      left: 60%;
+     top: 95%;
      font-family: sans-serif;
-     font-weight: 400;
-     font-size: 1.2rem;
+     font-weight: 100;
+     font-size: .8rem;
      text-transform: uppercase;
      padding: 0 2rem;
  }
