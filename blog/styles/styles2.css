@@ -421,6 +421,7 @@
 
  .comment-area {
      margin-top: 100px;
+     margin-bottom: 3rem;
 
  }
 
@@ -474,6 +475,7 @@
      background: #fff;
      border-radius: 20px;
      transition: all 0.4s;
+
  }
 
  .view-comment:hover {
@@ -502,4 +504,48 @@
      left: 80%;
      font-size: 12px;
      font-weight: 500;
+ }
+
+ /* footer */
+
+ .social-footer {
+     padding: 1rem;
+     /* margin-top: .5rem; */
+     background: #ddd;
+     border-top: .1rem solid red;
+     position: relative;
+
+ }
+
+ .social-footer ul {
+     position: absolute;
+     left: 20%;
+     font-size: 1.8rem;
+     top: 20%;
+
+ }
+
+ .social-footer ul li {
+     padding: 0 2rem;
+ }
+
+ .social-footer ul li a {
+     color: #222;
+     transition: all 0.4s;
+
+ }
+
+ .social-footer ul li a:hover {
+     color: red;
+
+ }
+
+ .social-footer .apec-name {
+     position: relative;
+     left: 60%;
+     font-family: sans-serif;
+     font-weight: 400;
+     font-size: 1.2rem;
+     text-transform: uppercase;
+     padding: 0 2rem;
  }
